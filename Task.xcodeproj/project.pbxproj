@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6AD775F61EB1A24E0019BEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD775F51EB1A24E0019BEE8 /* AppDelegate.swift */; };
-		6AD775F81EB1A24E0019BEE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD775F71EB1A24E0019BEE8 /* ViewController.swift */; };
 		6AD775FB1EB1A24E0019BEE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD775F91EB1A24E0019BEE8 /* Main.storyboard */; };
 		6AD775FE1EB1A24E0019BEE8 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD775FC1EB1A24E0019BEE8 /* Task.xcdatamodeld */; };
 		6AD776001EB1A24E0019BEE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD775FF1EB1A24E0019BEE8 /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		6AD776191EB1A24E0019BEE8 /* TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD776181EB1A24E0019BEE8 /* TaskUITests.swift */; };
 		6AD776271EB1A27A0019BEE8 /* DBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD776261EB1A27A0019BEE8 /* DBManagerTests.swift */; };
 		6AD7762D1EB1A4370019BEE8 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7762C1EB1A4370019BEE8 /* DBManager.swift */; };
+		6AD7762F1EB1C19B0019BEE8 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		6AD775F21EB1A24E0019BEE8 /* Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD775F51EB1A24E0019BEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AD775F71EB1A24E0019BEE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AD775FA1EB1A24E0019BEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AD775FD1EB1A24E0019BEE8 /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
 		6AD775FF1EB1A24E0019BEE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		6AD7761A1EB1A24E0019BEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD776261EB1A27A0019BEE8 /* DBManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManagerTests.swift; sourceTree = "<group>"; };
 		6AD7762C1EB1A4370019BEE8 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 		6AD776291EB1A40B0019BEE8 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				6AD775F71EB1A24E0019BEE8 /* ViewController.swift */,
+				6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -301,9 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD775FE1EB1A24E0019BEE8 /* Task.xcdatamodeld in Sources */,
-				6AD775F81EB1A24E0019BEE8 /* ViewController.swift in Sources */,
 				6AD775F61EB1A24E0019BEE8 /* AppDelegate.swift in Sources */,
 				6AD7762D1EB1A4370019BEE8 /* DBManager.swift in Sources */,
+				6AD7762F1EB1C19B0019BEE8 /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +547,7 @@
 				6AD7761F1EB1A24E0019BEE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AD776201EB1A24E0019BEE8 /* Build configuration list for PBXNativeTarget "TaskTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +556,7 @@
 				6AD776221EB1A24E0019BEE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AD776231EB1A24E0019BEE8 /* Build configuration list for PBXNativeTarget "TaskUITests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +565,7 @@
 				6AD776251EB1A24E0019BEE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

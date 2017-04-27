@@ -33,9 +33,9 @@ class DBManager{
         return flag
     }
     
-    class func fetchAllEvents() -> [Event]{
+    class func fetchAllEvents() -> [Event]?{
         let managedContext = self.getContext()
-        var events:[Event] = []
+        var events:[Event]? = nil
         let request: NSFetchRequest<Event> = Event.fetchRequest()
         do{
             events = try managedContext.fetch(request)
@@ -59,6 +59,39 @@ class DBManager{
             print("Error \(error)")
         }
         return event
+    }
+    
+    class func deleteEventWithName(_ name: String) -> Bool{
+        var flag = false
+        if let event = fetchEventWithName(name){
+            let context = self.getContext()
+            do{
+                try context.delete(event)
+                flag = true
+            }catch{
+                print("Error: \(error)")
+            }
+        }else{
+            print("Event Not Found")
+        }
+        return flag
+    }
+    
+    class func updateEventWithName(_ oldName: String, newName: String) -> Bool{
+        var flag = false
+        if let event = fetchEventWithName(oldName){
+            let context = getContext()
+            event.name = newName
+            do{
+                try context.save()
+                flag = true
+            }catch{
+                print("Error \(error)")
+            }
+        }else{
+            print("Event Not Found")
+        }
+        return flag
     }
     
     //MARK: - WORK OPERATIONS

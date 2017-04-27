@@ -111,11 +111,13 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    public func fetchEventWithName(_ name: String){
+    public func fetchEventWithName(_ name: String) -> Event?{
         if let event = DBManager.fetchEventWithName(name){
             print(event.name!)
+            return event
         }else{
             print("Not Found")
+            return nil
         }
     }
     
@@ -133,6 +135,18 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }else{
             print("Not Saved")
+        }
+    }
+    
+    // MARK:- SEGUE CALL
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "eventCellIdentifier"{
+            var index = eventTableView.indexPathForSelectedRow?.row
+            
+            let destinationVC: WorkViewController = segue.destination as! WorkViewController
+            destinationVC.event = self.fetchEventWithName(events[index!])
+            
+            print(index!)
         }
     }
 

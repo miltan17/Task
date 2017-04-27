@@ -17,6 +17,7 @@
 		6AD776271EB1A27A0019BEE8 /* DBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD776261EB1A27A0019BEE8 /* DBManagerTests.swift */; };
 		6AD7762D1EB1A4370019BEE8 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7762C1EB1A4370019BEE8 /* DBManager.swift */; };
 		6AD7762F1EB1C19B0019BEE8 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */; };
+		6AD776311EB204710019BEE8 /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD776301EB204710019BEE8 /* WorkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6AD776261EB1A27A0019BEE8 /* DBManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManagerTests.swift; sourceTree = "<group>"; };
 		6AD7762C1EB1A4370019BEE8 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		6AD776301EB204710019BEE8 /* WorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */,
+				6AD776301EB204710019BEE8 /* WorkViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD776311EB204710019BEE8 /* WorkViewController.swift in Sources */,
 				6AD775FE1EB1A24E0019BEE8 /* Task.xcdatamodeld in Sources */,
 				6AD775F61EB1A24E0019BEE8 /* AppDelegate.swift in Sources */,
 				6AD7762D1EB1A4370019BEE8 /* DBManager.swift in Sources */,

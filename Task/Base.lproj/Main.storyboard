@@ -35,6 +35,9 @@
                                             <color key="backgroundColor" red="0.027578852349999999" green="0.59443108980000003" blue="0.4537244486" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.027578852352259962" green="0.59443108975641024" blue="0.45372444859911731" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="3FG-6H-un7" kind="show" identifier="eventCellIdentifier" id="s6c-6b-upu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -66,6 +69,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="34.632683658170919"/>
+        </scene>
+        <!--Work View Controller-->
+        <scene sceneID="tG3-cw-zfg">
+            <objects>
+                <viewController id="3FG-6H-un7" customClass="WorkViewController" customModule="Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ApD-GF-HY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="GrS-h9-rgQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ch1-sU-5Yd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULX-SF-gqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mNj-64-xlq">

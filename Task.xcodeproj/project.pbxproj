@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD7762B1EB1A41D0019BEE8 /* DB */,
-				6AD776291EB1A40B0019BEE8 /* VC */,
+				6AD776291EB1A40B0019BEE8 /* ViewController */,
 				6AD7762A1EB1A4150019BEE8 /* Layouts */,
 				6AD776281EB1A3FA0019BEE8 /* SupportingFiles */,
 			);
@@ -140,12 +140,12 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		6AD776291EB1A40B0019BEE8 /* VC */ = {
+		6AD776291EB1A40B0019BEE8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */,
 			);
-			name = VC;
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		6AD7762A1EB1A4150019BEE8 /* Layouts */ = {

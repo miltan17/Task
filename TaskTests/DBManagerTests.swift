@@ -7,6 +7,7 @@
 //
 
 import XCTest
+//import CoreData
 @testable import Task
 
 class DBManagerTests: XCTestCase {
@@ -21,16 +22,17 @@ class DBManagerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSaveEvent(){
+        XCTAssertTrue(DBManager.saveEvent("Event 1"))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDeleteEvent(){
+        DBManager.saveEvent("Event 1")
+        XCTAssertTrue(DBManager.deleteEventWithName("Event 1"))
     }
     
+    func testUpdateEvent(){
+        DBManager.saveEvent("Event 1")
+        XCTAssertTrue(DBManager.updateEventWithName("Event 1", newName: "Event 2"))
+    }
 }

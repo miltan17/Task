@@ -113,7 +113,6 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func fetchEventWithName(_ name: String) -> Event?{
         if let event = DBManager.fetchEventWithName(name){
-            print(event.name!)
             return event
         }else{
             print("Not Found")
@@ -145,8 +144,6 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             let destinationVC: WorkViewController = segue.destination as! WorkViewController
             destinationVC.event = self.fetchEventWithName(events[index!])
-            
-            print(index!)
         }
     }
 

@@ -35,4 +35,10 @@ class DBManagerTests: XCTestCase {
         DBManager.saveEvent("Event 1")
         XCTAssertTrue(DBManager.updateEventWithName("Event 1", newName: "Event 2"))
     }
+    
+    func testSaveWorkForEvent(){
+        DBManager.saveEvent("Event")
+        let event: Event = DBManager.fetchEventWithName("Event")!
+        XCTAssertTrue(DBManager.saveWorkForEvent(event))
+    }
 }

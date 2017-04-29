@@ -4,6 +4,7 @@ import CoreData
 
 class DBManager{
     
+    
     private init(){
         
     }
@@ -95,15 +96,13 @@ class DBManager{
     }
     
     //MARK: - WORK OPERATIONS
-    class func saveWorkForEvent(_ event: Event) -> Bool{
+    class func saveWorkForEvent(_ event: Event, _ title: String, _ details: String, _ date: String) -> Bool{
         var flag = false
         let context = getContext()
-        
         let work = Work(context: context)
-        work.title = "Work 2"
-        work.details = "This is to be done within the fixed time"
-        work.date = Date() as NSDate?
-        
+        work.title = title
+        work.details = details
+        work.date = date.dateValue! as NSDate?
         event.addToWorks(work)
         do{
             try context.save()
@@ -115,12 +114,34 @@ class DBManager{
         return flag
     }
     
-//    class func fetchAllWorkForEvent(_ event: Event) -> [Event]?{
-//        let events: [Event]? = nil
-//        let context = getContext()
-//        
-//        return events
-//    }
+    
+    class func updateWorkForEvent(oldwork: Work, _ title: String, _ details: String, _ date: NSDate) -> Bool{
+        var flag = false
+        let context = getContext()
+        oldwork.title = title
+        oldwork.details = details
+        oldwork.date = date
+        do{
+            try context.save()
+            flag = true
+        }catch{
+            print(error)
+        }
+        return flag
+    }
+    
+    class func removeWorkFromEvent(_ event: Event, _ work: Work) -> Bool{
+        var flag = false
+        let context = getContext()
+        event.removeFromWorks(work)
+        do{
+            try context.delete(work)
+            flag = true
+        }catch{
+            print(error)
+        }
+        return flag
+    }
     
     // MARK: - Core Data stack
     
@@ -168,3 +189,35 @@ class DBManager{
     }
 
 }
+
+
+//extension Date{
+//    var stringValue: String{
+//        return self.toString()
+//    }
+//    
+//    func toString() -> String {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//        let str = formatter.string(from: self as Date)
+//        return str
+//    }
+//}
+//
+//extension String{
+//    var dateValue: Date?{
+//        return self.toDate()
+//    }
+//    
+//    func toDate() -> Date? {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//        if let date = formatter.date(from: self) {
+//            return date as Date?
+//        }else{
+//            // if format failed, Put some code here
+//            return nil // an example
+//        }
+//    }
+//}
+

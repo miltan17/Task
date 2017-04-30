@@ -17,6 +17,7 @@ class WorkViewController: UIViewController, UITableViewDataSource, UITableViewDe
         works.removeAll()
         getEvent()
         getWorks()
+        sortWorks()
         workTable.reloadData()
     }
     
@@ -30,6 +31,9 @@ class WorkViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 works.append(work as! Work)
             }
         }
+    }
+    func sortWorks(){
+        works.sort(by: { $0.date?.compare($1.date as! Date) == .orderedAscending})
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -13,10 +13,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad(){
         super.viewDidLoad()
         
-//        deleteEventsWithName("Second Event")
         fetchAllEvents()
-//        fetchEventWithName("First Event")
-//        updateEvent("Second Event", newName: "Third Event")
     }
 
     @IBAction func addEvent(_ sender: Any) {
@@ -34,6 +31,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let textField = alert.textFields![0]
             self.saveEvent(textField.text!)
             self.events.append(textField.text!)
+            self.events.sort()
             self.eventTableView.reloadData()
         })
         
@@ -125,6 +123,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             for event in fetchedEvents{
                 events.append(event.name!)
             }
+            events.sort()
         }
     }
     

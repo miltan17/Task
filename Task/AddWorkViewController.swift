@@ -42,9 +42,9 @@ class AddWorkViewController: UIViewController {
     func addWork(){
         let title = titleTextField.text!
         let details = detailsTextField.text!
-        let det = datePicker.date
-        let date = det.addingTimeInterval(6.0 * 60.0 * 60.0)
-        
+        let date = datePicker.date
+//        let date = det.addingTimeInterval(6.0 * 60.0 * 60.0)
+//
         if DBManager.saveWorkForEvent(event!, title, details, date.stringValue){
             print("Added")
         }
@@ -57,7 +57,7 @@ class AddWorkViewController: UIViewController {
         let title = titleTextField.text
         let details = detailsTextField.text
         
-        let date = datePicker.date.addingTimeInterval(6.0 * 60.0 * 60.0)
+        let date = datePicker.date
         let dateInString = date.stringValue
         
         let finalDate = dateInString.dateValue

@@ -143,7 +143,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             var index = eventTableView.indexPathForSelectedRow?.row
             
             let destinationVC: WorkViewController = segue.destination as! WorkViewController
-            destinationVC.event = self.fetchEventWithName(events[index!])
+//            destinationVC.event = self.fetchEventWithName(events[index!])
+            destinationVC.eventName = events[index!]
         }
     }
 

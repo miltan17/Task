@@ -21,6 +21,7 @@ class AddWorkViewController: UIViewController {
         }
     }
     
+    
     func initWorkToTheFields(){
         titleTextField.text = work?.title
         detailsTextField.text = work?.details
@@ -34,6 +35,8 @@ class AddWorkViewController: UIViewController {
         }else{
             updateWork()
         }
+        (previousViewController as! WorkViewController).eventName = event?.name!
+        navigationController?.popToViewController(previousViewController!, animated: true)
     }
     
     func addWork(){
@@ -48,7 +51,6 @@ class AddWorkViewController: UIViewController {
         else{
             print("Failed")
         }
-        
     }
     
     func updateWork(){
@@ -95,5 +97,15 @@ extension String{
             // if format failed, Put some code here
             return nil // an example
         }
+    }
+}
+
+extension UIViewController{
+    var previousViewController:UIViewController?{
+        if let controllersOnNavStack = self.navigationController?.viewControllers, controllersOnNavStack.count >= 2 {
+            let n = controllersOnNavStack.count
+            return controllersOnNavStack[n - 2]
+        }
+        return nil
     }
 }

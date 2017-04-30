@@ -6,13 +6,22 @@ class WorkViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var workTable: UITableView!
 
+    var eventName: String? = nil
     var event: Event? = nil
     var works = [Work]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        DBManager.saveWorkForEvent(event!)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        works.removeAll()
+        getEvent()
         getWorks()
+        workTable.reloadData()
+    }
+    
+    func getEvent(){
+        event = DBManager.fetchEventWithName(eventName!)
     }
     
     func getWorks(){
@@ -66,7 +75,6 @@ class WorkViewController: UIViewController, UITableViewDataSource, UITableViewDe
             var index = workTable.indexPathForSelectedRow?.row
             
             let destinationVC: AddWorkViewController = segue.destination as! AddWorkViewController
-//            destinationVC.event = self.fetchEventWithName(events[index!])
             destinationVC.add = true
             destinationVC.event = event!
             destinationVC.title = "Add Work"

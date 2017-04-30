@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52EC8E751EB4677000191E22 /* AddWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC8E741EB4677000191E22 /* AddWorkViewController.swift */; };
+		6AC92B3C1EB5D10700303C32 /* WorkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC92B3B1EB5D10700303C32 /* WorkDetailViewController.swift */; };
 		6AD775F61EB1A24E0019BEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD775F51EB1A24E0019BEE8 /* AppDelegate.swift */; };
 		6AD775FB1EB1A24E0019BEE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD775F91EB1A24E0019BEE8 /* Main.storyboard */; };
 		6AD775FE1EB1A24E0019BEE8 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD775FC1EB1A24E0019BEE8 /* Task.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		52EC8E741EB4677000191E22 /* AddWorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkViewController.swift; sourceTree = "<group>"; };
+		6AC92B3B1EB5D10700303C32 /* WorkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkDetailViewController.swift; sourceTree = "<group>"; };
 		6AD775F21EB1A24E0019BEE8 /* Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD775F51EB1A24E0019BEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AD775FA1EB1A24E0019BEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				6AD7762E1EB1C19B0019BEE8 /* EventsViewController.swift */,
 				6AD776301EB204710019BEE8 /* WorkViewController.swift */,
+				6AC92B3B1EB5D10700303C32 /* WorkDetailViewController.swift */,
 				52EC8E741EB4677000191E22 /* AddWorkViewController.swift */,
 			);
 			name = ViewController;
@@ -309,6 +312,7 @@
 				6AD776311EB204710019BEE8 /* WorkViewController.swift in Sources */,
 				6AD775FE1EB1A24E0019BEE8 /* Task.xcdatamodeld in Sources */,
 				6AD775F61EB1A24E0019BEE8 /* AppDelegate.swift in Sources */,
+				6AC92B3C1EB5D10700303C32 /* WorkDetailViewController.swift in Sources */,
 				6AD7762D1EB1A4370019BEE8 /* DBManager.swift in Sources */,
 				6AD7762F1EB1C19B0019BEE8 /* EventsViewController.swift in Sources */,
 				52EC8E751EB4677000191E22 /* AddWorkViewController.swift in Sources */,

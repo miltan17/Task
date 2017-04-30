@@ -83,6 +83,13 @@ class WorkViewController: UIViewController, UITableViewDataSource, UITableViewDe
             destinationVC.event = event!
             destinationVC.title = "Add Work"
         }
+        
+        if segue.identifier == "workDetails"{
+            var index = workTable.indexPathForSelectedRow?.row
+            
+            let destinationVC: WorkDetailViewController = segue.destination as! WorkDetailViewController
+            destinationVC.work = works[index!]
+        }
     }
 }
 
